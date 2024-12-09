@@ -26,26 +26,26 @@ function addToCollection(collection, title, artist, yearPublished) {
 ///Adding songs to my website
 
 addToCollection(myCollection, 'Acid Rap', 'Chance The Rapper', '2013');
-console.log('My album collection: ', myCollection);
+console.log('Album added to collection: ', myCollection[0]);
 
 addToCollection(myCollection, 'POST HUMAN: NeX GEn', 'Bring Me The Horizon', '2023');
-console.log('My album collection: ', myCollection);
+console.log('Album added to collection: ', myCollection[1]);
 
 
 addToCollection(myCollection, 'Amo', 'Bring Me The Horizon', '2019');
-console.log('My album collection: ', myCollection);
+console.log('Album added to collection: ', myCollection[2]);
 
 
 addToCollection(myCollection, 'Shout At The Devil', 'Motley Crue', '1983');
-console.log('My album collection: ', myCollection);
+console.log('Album added to collection: ', myCollection[3]);
 
 
 addToCollection(myCollection, 'Collide With The Sky', 'Pierce The Veil', '2012');
-console.log('My album collection: ', myCollection);
+console.log('Album added to collection: ', myCollection[4]);
 
 
 addToCollection(myCollection, 'Rainbow Brain', 'Griz', '2021');
-console.log('My album collection: ', myCollection);
+console.log('Album added to collection: ', myCollection[5]);
 
 //Reorganizing prior collection
 
@@ -63,17 +63,21 @@ showCollection(myCollection);
 function findByArtist(collection, artist){
   let matchingResults = [];
   for (let i = 0; i<collection.length; i++){
-    console.log(collection[i]);
-    if(collection[i] === artist){
-      collection.push(artist);
+    if(collection[i].artist === artist){
+      matchingResults.push(collection[i]);
     }
   }
   return matchingResults;
 }
 
-findByArtist(myCollection, 'Nirvana');
 
-findByArtist(myCollection, 'Bring Me The Horizon');
+let matchingAlbums = findByArtist(myCollection, 'Nirvana');
+console.log('Albums matching Nirvana: ');
+showCollection(matchingAlbums);
+
+matchingAlbums = findByArtist(myCollection, 'Bring Me The Horizon');
+console.log('Albums matching Bring Me The Horizon: ');
+showCollection(matchingAlbums);
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
