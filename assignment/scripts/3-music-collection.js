@@ -13,11 +13,11 @@ let myCollection = [];
 
 //Funciton to add music to said array^
 
-function addToCollection(collection, title, artist, yearPubllished) {
+function addToCollection(collection, title, artist, yearPublished) {
   const album = {
     title,
     artist,
-    yearPubllished
+    yearPublished
   };
   collection.push(album);
   return album;
@@ -50,8 +50,12 @@ console.log('My album collection: ', myCollection);
 //Reorganizing prior collection
 
 function showCollection(collection){
-
+  for (let i = 0; i<collection.length; i++){
+    console.log(collection[i].title + ' by ' + collection[i].artist + ' published in, ' + collection[i].yearPublished);
+  }
 }
+
+showCollection(myCollection);
 
 
 //Finding an artist in the array
