@@ -61,9 +61,19 @@ showCollection(myCollection);
 //Finding an artist in the array
 
 function findByArtist(collection, artist){
-
+  let matchingResults = [];
+  for (let i = 0; i<collection.length; i++){
+    console.log(collection[i]);
+    if(collection[i] === artist){
+      collection.push(artist);
+    }
+  }
+  return matchingResults;
 }
 
+findByArtist(myCollection, 'Nirvana');
+
+findByArtist(myCollection, 'Bring Me The Horizon');
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
