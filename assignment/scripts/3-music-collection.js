@@ -7,25 +7,58 @@ console.log('***** Music Collection *****')
 // }
 
 
+//array for collection
 
 let myCollection = [];
 
+//Funciton to add music to said array^
+
 function addToCollection(collection, title, artist, yearPubllished) {
   const album = {
-    title: title,
-    artist: artist,
-    yearPubllished: yearPubllished
+    title,
+    artist,
+    yearPubllished
   };
   collection.push(album);
   return album;
 }
 
+///Adding songs to my website
 
-addToCollection(bigBlue, 'The big one', 'Geazy', '1943');
+addToCollection(myCollection, 'Acid Rap', 'Chance The Rapper', '2013');
+console.log('My album collection: ', myCollection);
 
+addToCollection(myCollection, 'POST HUMAN: NeX GEn', 'Bring Me The Horizon', '2023');
 console.log('My album collection: ', myCollection);
 
 
+addToCollection(myCollection, 'Amo', 'Bring Me The Horizon', '2019');
+console.log('My album collection: ', myCollection);
+
+
+addToCollection(myCollection, 'Shout At The Devil', 'Motley Crue', '1983');
+console.log('My album collection: ', myCollection);
+
+
+addToCollection(myCollection, 'Collide With The Sky', 'Pierce The Veil', '2012');
+console.log('My album collection: ', myCollection);
+
+
+addToCollection(myCollection, 'Rainbow Brain', 'Griz', '2021');
+console.log('My album collection: ', myCollection);
+
+//Reorganizing prior collection
+
+function showCollection(collection){
+
+}
+
+
+//Finding an artist in the array
+
+function findByArtist(collection, artist){
+
+}
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
